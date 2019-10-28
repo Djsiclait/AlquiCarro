@@ -18,4 +18,35 @@ public class AlquiCarro {
         // TODO code application logic here
     }
     
+    public static void RegistrarCliente(){
+        
+    }
+    
+    public static void RegistrarCarro(){
+        
+    }
+    
+    public static void RegistrarAgente(){
+        
+    }
+    
+    public static void RealizarAlquiler(){
+        
+    }
+    
+    public static void ListarAlquileres(){
+        
+    }
+    
+    public static void ListarClientes(){
+        
+    }
+    
+    public static void ListarAgentes(){
+        
+    }
+    
+    public static void CobrarAlquiler(){
+        
+    }
 }
