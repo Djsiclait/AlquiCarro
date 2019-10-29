@@ -5,8 +5,6 @@
  */
 package alquicarro;
 
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author Alfredo G.
@@ -15,9 +13,9 @@ public class Cliente extends Persona{
     private String Nombre;
     private String Direccion;
     private String Telefono;
-    private int IDcliente;
-    
-    
+    private String Identificacion;
+
+
     public String getNombre() {
         return Nombre;
     }
@@ -42,12 +40,12 @@ public class Cliente extends Persona{
         this.Telefono = Telefono;
     }
 
-    public int getIDcliente() {
-        return IDcliente;
+    public String getIdentificacion() {
+        return Identificacion;
     }
 
-    public void setIDcliente(int IDcliente) {
-        this.IDcliente = IDcliente;
-    }     
+    public void setIdentificacion(String Identificacion) {
+        this.Identificacion = Identificacion;
+    }
   
 }
