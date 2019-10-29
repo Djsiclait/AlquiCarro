@@ -9,14 +9,12 @@ package alquicarro;
  *
  * @author Alfredo G.
  */
-public class Persona {
+public class Persona{
     
     private String Nombre = "Alejandro Almonte";
     private String Direccion = "La Terraza";
     private String Telefono = "8091239874";
     
-    public void Saludo() {
-        System.out.println("Hola, Soy el agente " +Nombre);
-    }
+    
     
 }
