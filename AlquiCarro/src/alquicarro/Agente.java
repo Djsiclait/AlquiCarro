@@ -10,42 +10,21 @@ package alquicarro;
  * @author Alfredo G.
  */
 public class Agente extends Persona{
-   
-    private String Nombre;
-    private String Direccion;
-    private String Telefono;
-    private int IDagente;   
+
+    private String IDagente;
     private int Sueldo;
-    
-    public String getNombre() {
-        return Nombre;
+
+    public Agente(String IDagente, int Sueldo, String Nombre, String Direccion, String Telefono) {
+        super(Nombre, Direccion, Telefono);
+        this.IDagente = IDagente;
+        this.Sueldo = Sueldo;
     }
 
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
-    }
-
-    public String getDireccion() {
-        return Direccion;
-    }
-
-    public void setDireccion(String Direccion) {
-        this.Direccion = Direccion;
-    }
-
-    public String getTelefono() {
-        return Telefono;
-    }
-
-    public void setTelefono(String Telefono) {
-        this.Telefono = Telefono;
-    }
-
-    public int getIDagente() {
+    public String getIDagente() {
         return IDagente;
     }
 
-    public void setIDagente(int IDagente) {
+    public void setIDagente(String IDagente) {
         this.IDagente = IDagente;
     }
 
@@ -56,7 +35,6 @@ public class Agente extends Persona{
     public void setSueldo(int Sueldo) {
         this.Sueldo = Sueldo;
     }
-    
     
     
     

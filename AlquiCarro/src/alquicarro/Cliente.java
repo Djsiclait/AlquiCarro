@@ -10,42 +10,24 @@ package alquicarro;
  * @author Alfredo G.
  */
 public class Cliente extends Persona{
-    private String Nombre;
-    private String Direccion;
-    private String Telefono;
+    
     private String Identificacion;
-
-
-    public String getNombre() {
-        return Nombre;
+    
+    public Cliente(String Nombre, String Direccion, String Telefono, String Identificacion){
+        super(Nombre, Direccion, Telefono);
+        this.Identificacion = Identificacion;
     }
 
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
-    }
-
-    public String getDireccion() {
-        return Direccion;
-    }
-
-    public void setDireccion(String Direccion) {
-        this.Direccion = Direccion;
-    }
-
-    public String getTelefono() {
-        return Telefono;
-    }
-
-    public void setTelefono(String Telefono) {
-        this.Telefono = Telefono;
-    }
-
-    public String getIdentificacion() {
+      public String getIdentificacion() {
         return Identificacion;
     }
 
     public void setIdentificacion(String Identificacion) {
         this.Identificacion = Identificacion;
     }
-  
+    
+    public void Saludo() {
+        System.out.println("Hola, Mi nombre: " +Nombre);
+    }
+    
 }
