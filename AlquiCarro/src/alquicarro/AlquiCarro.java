@@ -15,6 +15,12 @@ public class AlquiCarro {
     // TODO: crear las listas de los objetos
 
     public static void main(String[] args) {
+        
+       String respuesta; // variable para guardar entradsa del usuario
+       
+       Scanner entrada = new Scanner(System.in); // instancia del lector de entrada de usuario
+       
+       do{
        // Mensaje de Bienvenida
        System.out.println("Bienvenido a AlquiCarro: tu solición para alquiler de carros\n");
        
@@ -27,25 +33,23 @@ public class AlquiCarro {
        System.out.println("\t3. Registrar Nuevo Agente");
        System.out.println("\t4. Registrar Nuevo Alquiler");
        
-       
        System.out.println("Consultas");
        System.out.println("\t5. Ver Registro de Clientes");
        System.out.println("\t6. Ver Registro de Carros");
        System.out.println("\t7. Ver Registro de Alquileres");
        
-       
        System.out.println("Cobros");
        System.out.println("\t8. Cobrar Alquiler");
        
-       // Capturar respuesta del usuario 
-       String respuesta; // variable para guardar entradsa del usuario
+       // Capturar respuesta del usuario
+       System.out.println("Elegir el codigo de la operación o presionar 0 para cerrar la aplicación.");
+       System.out.print("Respuesta : ");
+       respuesta = entrada.nextLine(); // capturando la respuesta del usuarios
        
-       Scanner entrada = new Scanner(System.in);
        
-       System.out.print("Respuesta: ");
-       respuesta = entrada.nextLine();
+       }while(!respuesta.equals("0")); // mantener la applicacion corriendo hasta que el usuario elige cerrarlo con 0
        
-       System.out.println(respuesta);
+       System.out.println("¡Gracias por preferir AlquiCarro! Hasta la proxima...");
     }
     
     public static void RegistrarCliente(){
