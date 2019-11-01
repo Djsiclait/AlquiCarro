@@ -9,14 +9,42 @@ package alquicarro;
  *
  * @author Alfredo G.
  */
-public class Persona {
+public class Persona{
     
-    private String Nombre = "Alejandro Almonte";
-    private String Direccion = "La Terraza";
-    private String Telefono = "8091239874";
-    
-    public void Saludo() {
-        System.out.println("Hola, Soy el agente " +Nombre);
+    String Nombre;
+    String Direccion;
+    String Telefono;
+
+    public Persona(String Nombre, String Direccion, String Telefono) {
+        this.Nombre = Nombre;
+        this.Direccion = Direccion;
+        this.Telefono = Telefono;
     }
+
+
+    public String getNombre() {
+        return Nombre;
+    }
+
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
+    }
+
+    public String getDireccion() {
+        return Direccion;
+    }
+
+    public void setDireccion(String Direccion) {
+        this.Direccion = Direccion;
+    }
+
+    public String getTelefono() {
+        return Telefono;
+    }
+
+    public void setTelefono(String Telefono) {
+        this.Telefono = Telefono;
+    }
+    
     
 }
