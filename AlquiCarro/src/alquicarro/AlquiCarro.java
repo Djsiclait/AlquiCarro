@@ -5,6 +5,7 @@
  */
 package alquicarro;
 
+import java.util.*;
 /**
  *
  * @author user
@@ -35,6 +36,16 @@ public class AlquiCarro {
        
        System.out.println("Cobros");
        System.out.println("\t8. Cobrar Alquiler");
+       
+       // Capturar respuesta del usuario 
+       String respuesta; // variable para guardar entradsa del usuario
+       
+       Scanner entrada = new Scanner(System.in);
+       
+       System.out.print("Respuesta: ");
+       respuesta = entrada.nextLine();
+       
+       System.out.println(respuesta);
     }
     
     public static void RegistrarCliente(){
