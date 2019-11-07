@@ -9,6 +9,33 @@ package alquicarro;
  *
  * @author Alfredo G.
  */
-public class Agente {
+public class Agente extends Persona{
+
+    private String IDagente;
+    private int Sueldo;
+
+    public Agente(String IDagente, int Sueldo, String Nombre, String Direccion, String Telefono) {
+        super(Nombre, Direccion, Telefono);
+        this.IDagente = IDagente;
+        this.Sueldo = Sueldo;
+    }
+
+    public String getIDagente() {
+        return IDagente;
+    }
+
+    public void setIDagente(String IDagente) {
+        this.IDagente = IDagente;
+    }
+
+    public int getSueldo() {
+        return Sueldo;
+    }
+
+    public void setSueldo(int Sueldo) {
+        this.Sueldo = Sueldo;
+    }
+    
+    
     
 }
