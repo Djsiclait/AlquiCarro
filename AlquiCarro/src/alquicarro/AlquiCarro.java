@@ -12,10 +12,10 @@ import java.util.*;
  * @author user
  */
 public class AlquiCarro{
-
+ 
     public static void main(String[] args) {
         String respuesta; // variable para guardar entradsa del usuario
-       
+        
        Scanner entrada = new Scanner(System.in); // instancia del lector de entrada de usuario
        
        boolean error = false;
@@ -175,5 +175,6 @@ public class AlquiCarro{
     
     public static void CobrarAlquiler(){
         
+       System.out.println("Cobros");
     }
 }
