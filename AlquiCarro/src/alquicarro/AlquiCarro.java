@@ -119,6 +119,9 @@ public class AlquiCarro {
        System.out.println("Modelo: ");
        String Modelo= teclado.nextLine();   // Capturando el modelo del carro.
        
+       System.out.println("Capacidad: ");
+       String Capacidad = teclado.nextLine();   // Capturando la capacidad del carro.
+       
        System.out.println("Año: ");
        int Ano = teclado.nextInt();         // Capturando el año del carro.
        
@@ -131,15 +134,12 @@ public class AlquiCarro {
        System.out.println("IDCarro: ");
        int IDCarro = teclado.nextInt();     // Capturando el id del carro
        
-       System.out.println("Capacidad: ");
-       String Capacidad = teclado.nextLine();   // Capturando la capacidad del carro
 
        listaCarro.add(new Carro(Marca,Modelo,Ano,Precio,Deposito,Capacidad,IDCarro));
 
        System.out.println(" \t 'Informacion Capturada' ");
        
        ListarCarros();
-       
    }
     
     public static void RegistrarAgente(){
