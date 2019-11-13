@@ -9,20 +9,19 @@ package alquicarro;
  *
  * @author user
  */
-public class Alquiler {
-    
-   public String Cliente;
-   public String Agente;
-   public String Carro;
-   public int SubTotal;
-   public int ITBIS;
-   public int Total;
-   public String fecha;
-   public String Condicion;
+    public class Alquiler {
+        public String Cliente;
+        public String IDagente;
+        public String Carro;
+        public int SubTotal;
+        public int ITBIS;
+        public int Total;
+        public String fecha;
+        public String Condicion;
 
-    public Alquiler(String Cliente, String Agente, String Carro, int SubTotal, int ITBIS, int Total, String fecha, String Condicion) {
+    public Alquiler(String Cliente, String IDagente, String Carro, int SubTotal, int ITBIS, int Total, String fecha, String Condicion) {
         this.Cliente = Cliente;
-        this.Agente = Agente;
+        this.IDagente = IDagente;
         this.Carro = Carro;
         this.SubTotal = SubTotal;
         this.ITBIS = ITBIS;

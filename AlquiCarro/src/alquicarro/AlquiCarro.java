@@ -13,11 +13,25 @@ import java.util.*;
 public class AlquiCarro {
     
     // TODO: crear las listas de los objetos
-
+    static ArrayList<Carro> listaCarro = new ArrayList<>();
+    
     public static void main(String[] args) {
         
-       String respuesta; // variable para guardar entradsa del usuario
+     // Lista de Carros
+    listaCarro.add(new Carro("Toyota","Camri",2014,750000,0,"6 Personas",1));
+    listaCarro.add(new Carro("Toyota","4Runner",2020,3000000,0,"6 Personas",2));
+    listaCarro.add(new Carro("Lexus","LX570",2020,8000000,0,"6 personas",3));
+    listaCarro.add(new Carro("Toyota","Land Cruirse PradoVXL",2020,4500000,0,"6 Personas",4));
+    listaCarro.add(new Carro("Hyundai","Sante fe Sport",2020,2500000,0,"6 Personas",5));
+    listaCarro.add(new Carro("Isuzu","DMAX",2020,2650000,0,"6 Personas",6));
+    listaCarro.add(new Carro("Kia","Sorento",2020,2000000,0,"6 Personas",7));
+    listaCarro.add(new Carro("MercedesBenz","Clase Gle450",2020,4000000,0,"6 Personas",8));
+    listaCarro.add(new Carro("BMW","Serie X5",2020,5500000,0,"6 Personas",9));
+    listaCarro.add(new Carro("Nissan","Frontier",2020,2000000,0,"6 Personas",10));
+        
+       String respuesta; // v6ariable para guardar entradsa del usuario
        
+        
        Scanner entrada = new Scanner(System.in); // instancia del lector de entrada de usuario
        
        boolean error = false;
@@ -74,7 +88,7 @@ public class AlquiCarro {
                ListarClientes();
                break;
            case "6":
-               // TODO: crear funccion listar carros
+               ListarCarro();
                break;
            case "7":
                ListarAgentes();
@@ -90,17 +104,49 @@ public class AlquiCarro {
                break;
        }
        
-       }while(!respuesta.equals("0")); // mantener la applicacion corriendo hasta que el usuario elige cerrarlo con 0
+    }   while(!respuesta.equals("0")); // mantener la applicacion corriendo hasta que el usuario elige cerrarlo con 0
        
-       System.out.println("\n\n\t¡Gracias por preferir AlquiCarro! Hasta la proxima...");
+        System.out.println("\n\n\t¡Gracias por preferir AlquiCarro! Hasta la proxima...");
     }
     
     public static void RegistrarCliente(){
-        
+     
     }
     
     public static void RegistrarCarro(){
+     // Capturar la informacion del usuario
+    Scanner teclado= new Scanner(System.in);
         
+    System.out.println("Marca: ");
+    String Marca= teclado.nextLine();    // Capturando la informacion del usuario.
+    System.out.println("Modelo: ");
+    String Modelo= teclado.nextLine();   // Capturando la informacion del usuario.
+    System.out.println("Ano: ");
+    int Ano = teclado.nextInt();         // Capturando la informacion del usuario.
+    System.out.println("Precio: ");
+    int Precio = teclado.nextInt();      // Capturando la informacion del usuario.
+    System.out.println("Deposito: ");
+   int Deposito = teclado.nextInt();    // Capturando la informacion del usuario.
+    System.out.println("IDCarro: ");
+    int IDCarro = teclado.nextInt();     // Capturando la informacion del usuario.
+    System.out.println("Capacidad: ");
+    String Capacidad = teclado.nextLine();
+    
+    listaCarro.add(new Carro(Marca,Modelo,Ano,Precio,Deposito,Capacidad,IDCarro));
+    
+    System.out.println(" \t 'Informacion Capturada' ");
+    
+   }
+      public static String imprimirLista(ArrayList<Carro> lista){
+        String result="";
+      
+        for (int i = 0; i < lista.size(); i++) {
+            result += lista.get(i).toString();
+            
+        }
+        
+        return result;
+   
     }
     
     public static void RegistrarAgente(){
@@ -117,6 +163,15 @@ public class AlquiCarro {
     
     public static void ListarClientes(){
         
+    }
+    
+    public static void ListarCarro(){
+        
+     for (int   i= 0;i <listaCarro.size();  i++) {
+       System.out.println(listaCarro.get(i));
+      
+        }
+       
     }
     
     public static void ListarAgentes(){
