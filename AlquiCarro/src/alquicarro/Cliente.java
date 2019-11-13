@@ -11,7 +11,7 @@ package alquicarro;
  */
 public class Cliente extends Persona{
     
-    private String Identificacion;
+    public static String Identificacion;
     
     public Cliente(String Nombre, String Direccion, String Telefono, String Identificacion){
         super(Nombre, Direccion, Telefono);
@@ -26,8 +26,11 @@ public class Cliente extends Persona{
         this.Identificacion = Identificacion;
     }
     
-    public void Saludo() {
-        System.out.println("Hola, Mi nombre: " +Nombre);
+    @Override
+    public String toString() {
+        return "Identificacion: "+Identificacion+"\nNombre: "+Nombre+""
+                + "\nDireccion: "+Direccion+"\nTelefono: "+Telefono;
     }
+
     
 }
