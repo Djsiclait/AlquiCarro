@@ -10,6 +10,7 @@ import java.util.*;
  *
  * @author user
  */
+
 public class AlquiCarro {
     
     // TODO: crear las listas de los objetos
@@ -143,7 +144,23 @@ public class AlquiCarro {
    }
     
     public static void RegistrarAgente(){
+        System.out.println("Registro de Agente");
+        Scanner entrada = new Scanner(System.in);
+        List<String> listAgente = new ArrayList<String>();
         
+        System.out.println("Ingrese el Nombre: ");
+        Persona.Nombre = entrada.nextLine();
+        System.out.println("Ingrese el Direccion: ");
+        Persona.Direccion = entrada.nextLine();
+        System.out.println("Ingrese el Telefono: ");
+        Persona.Telefono = entrada.nextLine();
+        System.out.println("Ingrese el ID: ");
+        Agente.IDagente = entrada.nextLine();
+        System.out.println("Ingrese el Sueldo: ");
+        Agente.Sueldo = entrada.nextInt();
+        
+        listAgente.add(Persona.Nombre+Persona.Direccion+Persona.Telefono+
+                Agente.IDagente+Agente.Sueldo);
     }
     
     public static void RealizarAlquiler(){
@@ -154,8 +171,14 @@ public class AlquiCarro {
         
     }
     
-    public static void ListarClientes(){
+    public static String ListarClientes(List<String> listCliente){
         
+        String result = "";
+        
+        for (int i = 0; i < listCliente.size(); i++) {
+            result += listCliente.get(i).toString();
+        }
+        return result;
     }
     
     public static void ListarCarros(){

@@ -11,8 +11,8 @@ package alquicarro;
  */
 public class Agente extends Persona{
 
-    private String IDagente;
-    private int Sueldo;
+    public static String IDagente;
+    public static int Sueldo;
 
     public Agente(String IDagente, int Sueldo, String Nombre, String Direccion, String Telefono) {
         super(Nombre, Direccion, Telefono);

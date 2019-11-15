@@ -11,9 +11,9 @@ package alquicarro;
  */
 public class Persona{
     
-    String Nombre;
-    String Direccion;
-    String Telefono;
+    public static String Nombre;
+    public static String Direccion;
+    public static String Telefono;
 
     public Persona(String Nombre, String Direccion, String Telefono) {
         this.Nombre = Nombre;

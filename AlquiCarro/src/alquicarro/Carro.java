@@ -11,15 +11,15 @@ package alquicarro;
  */
  public class Carro {
     
-    public String Marca;
-    public String Modelo;
-    public int Año;
-    public int Precio;
-    public int Deposito;
-    public String Capacidad;
-    public int IDCarro;
+    public static String Marca;
+    public static String Modelo;
+    public static int Año;
+    public static int Precio;
+    public static int Deposito;
+    public static String IDCarro;
+    public static int Capacidad;
 
- public Carro( String Marca, String Modelo, int Año, int Precio, int Deposito, String Capacidad, int IDCarro) {
+    public Carro( String Marca, String Modelo, int Año, int Precio, int Deposito, String Capacidad, int IDCarro) {
     this.Marca = Marca;
     this.Modelo = Modelo;
     this.Año = Año;
