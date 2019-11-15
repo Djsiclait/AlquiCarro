@@ -15,6 +15,7 @@ public class AlquiCarro {
     
     // TODO: crear las listas de los objetos
     static ArrayList<Carro> listaCarro = new ArrayList<>();
+    static List<String> listCliente;
     
     public static void main(String[] args) {
         // Lista de Carros
@@ -29,7 +30,7 @@ public class AlquiCarro {
         listaCarro.add(new Carro("BMW","Serie X5",2020,5500000,0,"6 Personas",9));
         listaCarro.add(new Carro("Nissan","Frontier",2020,2000000,0,"6 Personas",10));
 
-        String respuesta; // v6ariable para guardar entradsa del usuario
+        String respuesta; // variable para guardar entradsa del usuario
         Scanner entrada = new Scanner(System.in); // instancia del lector de entrada de usuario
 
         boolean error = false;
@@ -135,7 +136,6 @@ public class AlquiCarro {
        System.out.println("IDCarro: ");
        int IDCarro = teclado.nextInt();     // Capturando el id del carro
        
-
        listaCarro.add(new Carro(Marca,Modelo,Ano,Precio,Deposito,Capacidad,IDCarro));
 
        System.out.println(" \t 'Informacion Capturada' ");
@@ -171,13 +171,14 @@ public class AlquiCarro {
         
     }
     
-    public static String ListarClientes(List<String> listCliente){
+    public static String ListarClientes(){
         
         String result = "";
         
         for (int i = 0; i < listCliente.size(); i++) {
             result += listCliente.get(i).toString();
         }
+        
         return result;
     }
     

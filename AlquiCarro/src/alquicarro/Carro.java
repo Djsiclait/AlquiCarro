@@ -16,8 +16,8 @@ package alquicarro;
     public static int Año;
     public static int Precio;
     public static int Deposito;
-    public static String IDCarro;
-    public static int Capacidad;
+    public static int IDCarro;
+    public static String Capacidad;
 
     public Carro( String Marca, String Modelo, int Año, int Precio, int Deposito, String Capacidad, int IDCarro) {
     this.Marca = Marca;
