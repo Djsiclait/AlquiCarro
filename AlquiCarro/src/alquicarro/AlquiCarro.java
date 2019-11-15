@@ -6,15 +6,23 @@
 package alquicarro;
 
 import java.util.*;
+<<<<<<< HEAD
 
+=======
+>>>>>>> e8296cca98d09fa5a2fb9658760cd94b383a1ae0
 /**
  *
  * @author user
  */
+<<<<<<< HEAD
+=======
+
+>>>>>>> e8296cca98d09fa5a2fb9658760cd94b383a1ae0
 public class AlquiCarro{
  
     public static void main(String[] args) {
         String respuesta; // variable para guardar entradsa del usuario
+<<<<<<< HEAD
         
        Scanner entrada = new Scanner(System.in); // instancia del lector de entrada de usuario
        
@@ -87,10 +95,84 @@ public class AlquiCarro{
                error = true;
                break;
        }
+=======
+
+        Scanner entrada = new Scanner(System.in); // instancia del lector de entrada de usuario
+>>>>>>> e8296cca98d09fa5a2fb9658760cd94b383a1ae0
        
-       }while(!respuesta.equals("0")); // mantener la applicacion corriendo hasta que el usuario elige cerrarlo con 0
+        boolean error = false;
        
-       System.out.println("\n\n\t¡Gracias por preferir AlquiCarro! Hasta la proxima...");
+        do{
+        // Mensaje de Bienvenida
+        System.out.println("Bienvenido a AlquiCarro: tu solición para alquiler de carros\n");
+
+        // Presentando el menú al usuario
+        System.out.println("Favor elegir la operación que deseas realizar:");
+
+        System.out.println("Registración");
+        System.out.println("\t1. Registrar Nuevo Cliente");
+        System.out.println("\t2. Registrar Nuevo Carro");
+        System.out.println("\t3. Registrar Nuevo Agente");
+        System.out.println("\t4. Registrar Nuevo Alquiler");
+
+        System.out.println("Consultas");
+        System.out.println("\t5. Ver Registro de Clientes");
+        System.out.println("\t6. Ver Registro de Carros");
+        System.out.println("\t7. Registrar Nuevo Agente");
+        System.out.println("\t8. Ver Registro de Alquileres");
+
+        System.out.println("Cobros");
+        System.out.println("\t9. Cobrar Alquiler");
+
+        // Capturar respuesta del usuario
+        System.out.println("Elegir el codigo de la operación o presionar 0 para cerrar la aplicación.");
+            if (error) {
+                System.out.println("Favor introducir una opcion válida");
+                error = false;
+            }
+        System.out.print("Respuesta : ");
+        respuesta = entrada.nextLine(); // capturando la respuesta del usuarios
+
+        // Cerebro del la aplicación
+        // Este parte permite el programa interpretar la entrada el usuario y ejecutar las funcionalidades elegidas
+        switch(respuesta){
+            case "0":
+                break;
+            case "1":
+                RegistrarCliente();
+                break;
+            case "2":
+                RegistrarCarro();
+                break;
+            case "3":
+                RegistrarAgente();
+                break;
+            case "4":
+                RealizarAlquiler();
+                break;
+            case "5":
+                ListarClientes();
+                break;
+            case "6":
+                // TODO: crear funccion listar carros
+                break;
+            case "7":
+                ListarAgentes();
+                break;
+            case "8":
+                ListarAlquileres();
+                break;
+            case "9":
+                CobrarAlquiler();
+                break;
+            default:
+                error = true;
+                break;
+        }
+
+        }while(!respuesta.equals("0")); // mantener la applicacion corriendo hasta que el usuario elige cerrarlo con 0
+
+        System.out.println("\n\n\t¡Gracias por preferir AlquiCarro! Hasta la proxima...");
     }
     
     public static void RegistrarCliente(){
@@ -108,8 +190,6 @@ public class AlquiCarro{
         Cliente.Identificacion = entrada.nextLine();
         
         listCliente.add(Persona.Nombre+Persona.Direccion+Persona.Telefono+Cliente.Identificacion);
-        
-        
     }
     
     public static void RegistrarCarro(){
@@ -134,7 +214,6 @@ public class AlquiCarro{
         
         listCarro.add(Carro.Marca+Carro.Modelo+Carro.Año+Carro.Precio+
                 Carro.Deposito+Carro.IDCarro+Carro.Capacidad);
-        
     }
     
     public static void RegistrarAgente(){
@@ -155,7 +234,6 @@ public class AlquiCarro{
         
         listAgente.add(Persona.Nombre+Persona.Direccion+Persona.Telefono+
                 Agente.IDagente+Agente.Sueldo);
-        
     }
     
     public static void RealizarAlquiler(){
@@ -169,6 +247,7 @@ public class AlquiCarro{
     public static void ListarClientes(){
        
     }
+    
     public static void ListarAgentes(){
         
     }
