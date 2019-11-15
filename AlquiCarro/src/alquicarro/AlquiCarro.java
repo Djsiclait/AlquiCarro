@@ -11,9 +11,11 @@ import java.util.*;
  * @author user
  */
 
+
 public class AlquiCarro{
 
     public static void main(String[] args) {
+        
         String respuesta; // variable para guardar entradsa del usuario
 
         Scanner entrada = new Scanner(System.in); // instancia del lector de entrada de usuario
@@ -69,7 +71,8 @@ public class AlquiCarro{
                 RealizarAlquiler();
                 break;
             case "5":
-                ListarClientes();
+                listCliente.add("Alfredo"+"La terraza"+"8296164250"+"020103");
+                ListarClientes(List<String> listCliente);
                 break;
             case "6":
                 // TODO: crear funccion listar carros
@@ -94,6 +97,7 @@ public class AlquiCarro{
     }
     
     public static void RegistrarCliente(){
+        
         System.out.println("Registro de Cliente");
         Scanner entrada = new Scanner(System.in);
         List<String> listCliente = new ArrayList<String>();
@@ -162,8 +166,14 @@ public class AlquiCarro{
         
     }
     
-    public static void ListarClientes(){
-       
+    public static String ListarClientes(List<String> listCliente){
+        
+        String result = "";
+        
+        for (int i = 0; i < listCliente.size(); i++) {
+            result += listCliente.get(i).toString();
+        }
+        return result;
     }
     
     public static void ListarAgentes(){
