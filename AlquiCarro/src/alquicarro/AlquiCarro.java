@@ -6,99 +6,19 @@
 package alquicarro;
 
 import java.util.*;
-<<<<<<< HEAD
-
-=======
->>>>>>> e8296cca98d09fa5a2fb9658760cd94b383a1ae0
 /**
  *
  * @author user
  */
-<<<<<<< HEAD
-=======
 
->>>>>>> e8296cca98d09fa5a2fb9658760cd94b383a1ae0
+
 public class AlquiCarro{
- 
+
     public static void main(String[] args) {
-        String respuesta; // variable para guardar entradsa del usuario
-<<<<<<< HEAD
         
-       Scanner entrada = new Scanner(System.in); // instancia del lector de entrada de usuario
-       
-       boolean error = false;
-       
-       do{
-       // Mensaje de Bienvenida
-       System.out.println("Bienvenido a AlquiCarro: tu solición para alquiler de carros\n");
-       
-       // Presentando el menú al usuario
-       System.out.println("Favor elegir la operación que deseas realizar:");
-       
-       System.out.println("Registración");
-       System.out.println("\t1. Registrar Nuevo Cliente");
-       System.out.println("\t2. Registrar Nuevo Carro");
-       System.out.println("\t3. Registrar Nuevo Agente");
-       System.out.println("\t4. Registrar Nuevo Alquiler");
-       
-       System.out.println("Consultas");
-       System.out.println("\t5. Ver Registro de Clientes");
-       System.out.println("\t6. Ver Registro de Carros");
-       System.out.println("\t7. Registrar Nuevo Agente");
-       System.out.println("\t8. Ver Registro de Alquileres");
-       
-       System.out.println("Cobros");
-       System.out.println("\t9. Cobrar Alquiler");
-       
-       // Capturar respuesta del usuario
-       System.out.println("Elegir el codigo de la operación o presionar 0 para cerrar la aplicación.");
-           if (error) {
-               System.out.println("Favor introducir una opcion válida");
-               error = false;
-           }
-       System.out.print("Respuesta : ");
-       respuesta = entrada.nextLine(); // capturando la respuesta del usuarios
-       
-       // Cerebro del la aplicación
-       // Este parte permite el programa interpretar la entrada el usuario y ejecutar las funcionalidades elegidas
-       switch(respuesta){
-           case "0":
-               break;
-           case "1":
-               RegistrarCliente();
-               break;
-           case "2":
-               RegistrarCarro();
-               break;
-           case "3":
-               RegistrarAgente();
-               break;
-           case "4":
-               RealizarAlquiler();
-               break;
-           case "5":
-               ListarClientes();
-               break;
-           case "6":
-               // TODO: crear funccion listar carros
-               break;
-           case "7":
-               ListarAgentes();
-               break;
-           case "8":
-               ListarAlquileres();
-               break;
-           case "9":
-               CobrarAlquiler();
-               break;
-           default:
-               error = true;
-               break;
-       }
-=======
+        String respuesta; // variable para guardar entradsa del usuario
 
         Scanner entrada = new Scanner(System.in); // instancia del lector de entrada de usuario
->>>>>>> e8296cca98d09fa5a2fb9658760cd94b383a1ae0
        
         boolean error = false;
        
@@ -151,7 +71,8 @@ public class AlquiCarro{
                 RealizarAlquiler();
                 break;
             case "5":
-                ListarClientes();
+                listCliente.add("Alfredo"+"La terraza"+"8296164250"+"020103");
+                ListarClientes(List<String> listCliente);
                 break;
             case "6":
                 // TODO: crear funccion listar carros
@@ -176,6 +97,7 @@ public class AlquiCarro{
     }
     
     public static void RegistrarCliente(){
+        
         System.out.println("Registro de Cliente");
         Scanner entrada = new Scanner(System.in);
         List<String> listCliente = new ArrayList<String>();
@@ -244,8 +166,14 @@ public class AlquiCarro{
         
     }
     
-    public static void ListarClientes(){
-       
+    public static String ListarClientes(List<String> listCliente){
+        
+        String result = "";
+        
+        for (int i = 0; i < listCliente.size(); i++) {
+            result += listCliente.get(i).toString();
+        }
+        return result;
     }
     
     public static void ListarAgentes(){
