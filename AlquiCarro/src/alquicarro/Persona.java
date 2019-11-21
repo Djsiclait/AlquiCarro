@@ -13,9 +13,9 @@ public class Persona{
     
     public static String Nombre;
     public static String Direccion;
-    public static String Telefono;
+    public static int Telefono;
 
-    public Persona(String Nombre, String Direccion, String Telefono) {
+    public Persona(String Nombre, String Direccion, int Telefono) {
         this.Nombre = Nombre;
         this.Direccion = Direccion;
         this.Telefono = Telefono;
@@ -38,11 +38,11 @@ public class Persona{
         this.Direccion = Direccion;
     }
 
-    public String getTelefono() {
+    public int getTelefono() {
         return Telefono;
     }
 
-    public void setTelefono(String Telefono) {
+    public void setTelefono(int Telefono) {
         this.Telefono = Telefono;
     }
     

@@ -29,6 +29,10 @@ package alquicarro;
         this.fecha = fecha;
         this.Condicion = Condicion;
     }
+
+    Alquiler(int idcliente, int idagente, int idcarro, int subtotal, int itbis, int total, int fecha, String condicion) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
    
    
     

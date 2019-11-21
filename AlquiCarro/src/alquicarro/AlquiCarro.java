@@ -15,7 +15,8 @@ public class AlquiCarro {
     
     // TODO: crear las listas de los objetos
     static ArrayList<Carro> listaCarro = new ArrayList<>();
-    static List<String> listCliente;
+    static ArrayList<Cliente> listaCliente= new ArrayList<>();
+    static ArrayList<Alquiler> listaAlquiler= new ArrayList<>();
     
     public static void main(String[] args) {
         // Lista de Carros
@@ -108,35 +109,55 @@ public class AlquiCarro {
     }
     
     public static void RegistrarCliente(){
-     
+       Scanner teclado= new Scanner(System.in);
+       System.out.println("Registrar Cliente");
+      
+       System.out.println("Nombre: ");       
+       String nombre= teclado.nextLine();   //Capturando el nombre del cliente.
+       
+       System.out.println("Direccion: ");    
+       String direccion= teclado.nextLine();  //Capturando la direccion del cliente.
+       
+       System.out.println("Telefono: ");
+       int telefono= teclado.nextInt();    //Capturando el telefono del cliente. 
+       
+       System.out.println("ID del Cliente: ");
+       int identificacion= teclado.nextInt();   //Capturando la identificacion del cliente.
+       
+       listaCliente.add(new Cliente(nombre,direccion,telefono,identificacion));
+       
+       System.out.println(" \t 'Informacion Capturada' ");
+          
+       ListarClientes();
     }
     
     public static void RegistrarCarro(){
         // Capturar la informacion del usuario
+       System.out.println("Registro de carro");
        Scanner teclado= new Scanner(System.in);
 
        System.out.println("Marca: ");
-       String Marca= teclado.nextLine();    // Capturando la marca del carro.
+       String marca= teclado.nextLine();    // Capturando la marca del carro.
        
        System.out.println("Modelo: ");
-       String Modelo= teclado.nextLine();   // Capturando el modelo del carro.
+       String modelo= teclado.nextLine();   // Capturando el modelo del carro.
        
        System.out.println("Capacidad: ");
-       String Capacidad = teclado.nextLine();   // Capturando la capacidad del carro.
+       String capacidad = teclado.nextLine();   // Capturando la capacidad del carro.
        
        System.out.println("Año: ");
-       int Ano = teclado.nextInt();         // Capturando el año del carro.
+       int ano = teclado.nextInt();         // Capturando el año del carro.
        
        System.out.println("Precio: ");
-       int Precio = teclado.nextInt();      // Capturando el precio del carro.
+       int precio = teclado.nextInt();      // Capturando el precio del carro.
        
        System.out.println("Deposito: ");
-       int Deposito = teclado.nextInt();    // Capturando el deposito del carro.
+       int deposito = teclado.nextInt();    // Capturando el deposito del carro.
        
        System.out.println("IDCarro: ");
-       int IDCarro = teclado.nextInt();     // Capturando el id del carro
+       int iDCarro = teclado.nextInt();     // Capturando el id del carro
        
-       listaCarro.add(new Carro(Marca,Modelo,Ano,Precio,Deposito,Capacidad,IDCarro));
+       listaCarro.add(new Carro(marca,modelo,ano,precio,deposito,capacidad,iDCarro));
 
        System.out.println(" \t 'Informacion Capturada' ");
        
@@ -150,12 +171,16 @@ public class AlquiCarro {
         
         System.out.println("Ingrese el Nombre: ");
         Persona.Nombre = entrada.nextLine();
+        
         System.out.println("Ingrese el Direccion: ");
         Persona.Direccion = entrada.nextLine();
+        
         System.out.println("Ingrese el Telefono: ");
-        Persona.Telefono = entrada.nextLine();
+        Persona.Telefono = entrada.nextInt();
+        
         System.out.println("Ingrese el ID: ");
         Agente.IDagente = entrada.nextLine();
+        
         System.out.println("Ingrese el Sueldo: ");
         Agente.Sueldo = entrada.nextInt();
         
@@ -164,25 +189,61 @@ public class AlquiCarro {
     }
     
     public static void RealizarAlquiler(){
-        
+       System.out.println("Registro de Alquiler");  
+       Scanner teclado= new Scanner(System.in);
+      
+       System.out.println("ID del Cliente:  ");
+       int idcliente= teclado.nextInt();        //Capturando ID del Cliente.
+       
+       System.out.println("ID del Agente:  ");
+       int idagente= teclado.nextInt();        //Capturando ID del Agente.
+      
+       System.out.println("ID del Carro:  ");
+       int idcarro= teclado.nextInt();      //Capturando ID del Carro. 
+      
+       System.out.println("Sub Total: ");
+       int subtotal= teclado.nextInt();   //Capturando el SubTotal.
+      
+       System.out.println("ITBIS: ");
+       int itbis= teclado.nextInt();    //Capturando el ITEBIS.
+      
+       System.out.println("Total: ");
+       int total= teclado.nextInt();    //Capturando el Total.
+      
+       System.out.println("Fecha: ");
+       int fecha= teclado.nextInt();       // Capturando la fecha en que fue realizado.
+      
+       System.out.println("Condicion: ");
+       String condicion= teclado.nextLine();  //Capturando la condicion. 
+      
+       listaAlquiler.add(new Alquiler(idcliente,idagente,idcarro,subtotal,itbis,total,fecha,condicion));
+      
+       System.out.println(" \t 'Informacion Registrada' ");
+      
+       ListarAlquileres();
+      
     }
     
     public static void ListarAlquileres(){
         
+            for (int i = 0; i < listaAlquiler.size(); i++) {
+               listaAlquiler.get(i).toString();
+        }
     }
     
     public static String ListarClientes(){
         
         String result = "";
         
-        for (int i = 0; i < listCliente.size(); i++) {
-            result += listCliente.get(i).toString();
+        for (int i = 0; i < listaCliente.size(); i++) {
+            result += listaCliente.get(i).toString();
         }
         
         return result;
     }
     
     public static void ListarCarros(){
+        
         listaCarro.stream().forEach((carro) -> {
             System.out.println(carro);
         });      
@@ -194,5 +255,6 @@ public class AlquiCarro {
     
     public static void CobrarAlquiler(){
         System.out.println("Cobros");
+        
     }
 }

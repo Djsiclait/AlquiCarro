@@ -13,9 +13,9 @@ public class Cliente extends Persona{
     
     public static String Identificacion;
     
-    public Cliente(String Nombre, String Direccion, String Telefono, String Identificacion){
+    public Cliente(String Nombre, String Direccion, int Telefono, int Identificacion){
         super(Nombre, Direccion, Telefono);
-        this.Identificacion = Identificacion;
+        
     }
 
       public String getIdentificacion() {
